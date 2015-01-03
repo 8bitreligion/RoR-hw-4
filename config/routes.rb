@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   
-resources :users#, only: [:index]
- 
-  #get '/' => 'home#index', as: :home
+resources :users do
+  resources :posts
+end
+  get '/' => 'home#index', as: :home
 
-  #get 'about' => 'home#about'
+  # get '/about' => 'home#about'
 
-  #get 'widgets' => 'home#widgets'
 
-  #get 'news' => 'home#news'
 
 end
 

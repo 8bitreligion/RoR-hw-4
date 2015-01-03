@@ -1,0 +1,10 @@
+<h1>Posts index page</h1>
+
+<%= @posts.each do |post| %>
+  <%= post.subject %>
+   <%= post.body %>
+    <br>
+  <% end %>
+
+  <%# Tried supplying a link to create a new post but rain into some difficulty
+  <%= link_to "Create a new post", new_user_post_path %>

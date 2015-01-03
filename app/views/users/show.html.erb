@@ -1,0 +1,11 @@
+
+
+<%=@user.fname %>
+ <%=@user.lname %>
+ <%=@user.email %>
+ <%=@user.password %>
+
+ <%= link_to "This user's posts", user_posts_path(@user) %>
+<%= link_to "New post", new_user_post_path(@user) %>
+
+

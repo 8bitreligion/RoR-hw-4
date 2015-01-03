@@ -1,0 +1,15 @@
+<h1>Users index page</h1>
+
+<% @users.each do |user| %>
+  <%= user.fname %>
+  <%= user.lname %>
+  <%= user.email %>
+  <%= link_to 'edit user', edit_user_path(user) %>
+  <%= link_to 'show user', user_path(user) %>
+  <%= link_to 'delete user', user_path(user), method: :delete %>
+<%= link_to 'new user', new_user_path(user) %>
+  <br>
+
+  <% end %>
+
+ 
