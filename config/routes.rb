@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 resources :users do
   resources :posts
 end
-  get '/' => 'home#index', as: :home
+  get '/' => 'home#index', as: :home # there is no index action in your home controller
 
   # get '/about' => 'home#about'
 
