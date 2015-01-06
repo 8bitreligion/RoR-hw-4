@@ -18,18 +18,18 @@ class UsersController < ApplicationController
     end
 
     def edit
-    	@users = User.find(params[:id])
+    	@user = User.find(params[:id]) # @user should be singular
     
     end
 
     def new
-    	@users = User.new 
+    	@user = User.new # @user should be singular
     end
     
     def create
-		@users = User.new(params_users)
-		@users.save
-		if @users.save
+		@user = User.new(params_users) # @user should be singular
+		@user.save
+		if @user.save
 			flash[:notice] = "Your account has been saved successfully!"
 			redirect_to users_path
 		else 	
